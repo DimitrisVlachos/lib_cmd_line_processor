@@ -13,24 +13,24 @@ Command line processor library
   
     while (proc.has_more()) {
   
-    const std::string& op = proc.get_next_string();
+        const std::string& op = proc.get_next_string();
     
-    if (op == "null") {
-      //some error
-      return 1;
-    }
+        if (op == "null") {
+            //some error
+            return 1;
+        }
     
-    if (!proc.has_more()) {
-      //some error
-      return 1;
-    }
+        if (!proc.has_more()) {
+            //some error
+            return 1;
+        }
     
-    if (op == "-int")
-      std::cout << "int = " << " << proc.get_next_int() << std::endl;
-    else if (op == "-string")
-      std::cout << "str = " << " << proc.get_next_string() << std::endl;
-    else if (op == "-double")
-      std::cout << "double = " << " << proc.get_next_double() << std::endl;
+        if (op == "-int")
+            std::cout << "int = " << " << proc.get_next_int() << std::endl;
+        else if (op == "-string")
+            std::cout << "str = " << " << proc.get_next_string() << std::endl;
+        else if (op == "-double")
+            std::cout << "double = " << " << proc.get_next_double() << std::endl;
       
     }
     
